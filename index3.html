@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">YASH</div>
+
+        <!-- Hamburger icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Menu items -->
+        <ul class="titles" id="navMenu">
+            <li
+                onclick="showContent(`Hi, I'm Yash, an engineering student passionate about Web Development.<br>I specialize in creating modern, responsive, and user-friendly websites with a focus on clean design and smooth user experience.`)">
+                Home
+            </li>
+
+            <div class="search">
+                <input type="text" placeholder="Search">
+            </div>
+
+            <li
+                onclick="showContent(`My Skills:<br>Frontend: HTML, CSS, JavaScript, React.js<br>Backend: Node.js, Express.js, MongoDB<br>Tools: GitHub, VS Code, Firebase<br>Other: UI/UX basics`)">
+                Skills
+            </li>
+
+            <li onclick="showResume()">Resume</li>
+
+            <li
+                onclick="showContent(`Services I Provide:<br>Full-stack web dev<br>Responsive design<br>Portfolio sites<br>Debugging & support`)">
+                Services
+            </li>
+
+            <li
+                onclick="showContent(`📍 Bengaluru, India<br>📧 yash@example.com<br>📱 +91-98765-43210<br>🌐 LinkedIn: linkedin.com/in/yash<br>💻 GitHub: github.com/yash`)">
+                Contact
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <div class="box1" id="box1">
+            <h3>Click on menu items to see content here 👆</h3>
+        </div>
+        <div class="box2">
+            <img src="ASSETS/OIP.png" alt="Portfolio Image">
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>We provide the best web solutions for your business. Building modern, fast, and user-friendly
+                    websites.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Email: aiwithyash@gmail.com</p>
+                <p>Phone: +91 xxxxxxxxxx</p>
+                <p>Address: Bengaluru, India</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Social Media</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/7697.yash?igsh=MXAwOTNjeTBoZ2luZw==">Instagram</a></li>
+                    <li><a href="https://github.com/yashsinge7676">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/yash-sigh-6b05a4370">LinkedIn</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-bottom">&copy; 2025 YourWebsiteName. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showContent(text) {
+            document.getElementById("box1").innerHTML = "<p>" + text + "</p>";
+        }
+
+        function showResume() {
+            document.getElementById("box1").innerHTML =
+                '<img src="ASSETS/resume.png" alt="Resume Image">';
+        }
+
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>
